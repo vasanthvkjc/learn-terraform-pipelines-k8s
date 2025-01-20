@@ -24,7 +24,7 @@ resource "google_container_cluster" "engineering" {
 resource "google_container_node_pool" "engineering_preemptible_nodes" {
   name     = "${var.cluster_name}-node-pool"
   cluster  = google_container_cluster.engineering.name
-  location = data.google_compute_zones.available.names.0
+  location = var.location
 
   version    = data.google_container_engine_versions.gke_version.release_channel_latest_version["STABLE"]
   node_count = var.node_count
