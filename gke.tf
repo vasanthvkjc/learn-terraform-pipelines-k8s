@@ -4,7 +4,7 @@
 data "google_compute_zones" "available" {}
 
 data "google_container_engine_versions" "gke_version" {
-  location       = var.region
+  location       = var.location
   version_prefix = "1.29."
 }
 
