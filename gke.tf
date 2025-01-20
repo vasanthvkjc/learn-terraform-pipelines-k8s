@@ -10,7 +10,7 @@ data "google_container_engine_versions" "gke_version" {
 
 resource "google_container_cluster" "engineering" {
   name     = var.cluster_name
-  location = data.google_compute_zones.available.names.0
+  location = var.location
 
   # We can't create a cluster with no node pool defined, but we want to only use
   # separately managed node pools. So we create the smallest possible default
