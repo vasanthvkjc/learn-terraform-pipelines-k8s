@@ -13,6 +13,12 @@ variable "cluster_name" {
   description = "Name of cluster."
 }
 
+varaiable "location" {
+  type        = string
+  default     = "us-central1-f"
+  description = "GCP Zone"
+}
+
 variable "google_project" {
   type        = string
   description = "Google Project to deploy cluster"
