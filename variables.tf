@@ -13,7 +13,7 @@ variable "cluster_name" {
   description = "Name of cluster."
 }
 
-varaiable "location" {
+variable "location" {
   type        = string
   default     = "us-central1-f"
   description = "GCP Zone"
