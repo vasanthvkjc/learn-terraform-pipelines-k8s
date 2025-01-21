@@ -5,7 +5,7 @@ data "google_compute_zones" "available" {}
 
 data "google_container_engine_versions" "gke_version" {
   location       = var.location
-  version_prefix = "1.29."
+  version_prefix = "1.28."
 }
 
 resource "google_container_cluster" "engineering" {
