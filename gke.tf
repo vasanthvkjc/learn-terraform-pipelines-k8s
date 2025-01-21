@@ -26,7 +26,7 @@ resource "google_container_node_pool" "engineering_preemptible_nodes" {
   cluster  = google_container_cluster.engineering.name
   location = var.location
 
-  version    = data.google_container_engine_versions.gke_version.release_channel_latest_version["STABLE"]
+  version    = "1.29.10-gke.1280000"
   node_count = var.node_count
 
   node_config {
